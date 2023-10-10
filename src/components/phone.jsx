@@ -1,16 +1,14 @@
+import { useLoaderData } from "react-router-dom";
 
-// import PropTypes from 'prop-types';
-
-const phone = () => {
+const Phone = () => {
+    const phone = useLoaderData()
     return (
         <div>
-
+            <h1>hello</h1>
+            <h1>{phone.name}</h1>
+            <img src={phone.image} alt="" />
         </div>
     );
 };
 
-phone.propTypes = {
-
-};
-
-export default phone;
+export default Phone;
