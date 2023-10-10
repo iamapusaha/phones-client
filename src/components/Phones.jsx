@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const Phones = () => {
@@ -6,6 +6,9 @@ const Phones = () => {
     return (
         <div>
             <h1>here the all number of data is {phones.length}</h1>
+            {
+                phones.map(phone => <li key={phone.id}><Link to={`/phones/${phone.id}`}>{phone.name}</Link></li>)
+            }
         </div>
     );
 };
